@@ -21,7 +21,7 @@ export default {
 
 	css: ['~/assets/scss/root.scss'],
 
-	modules: ['@nuxtjs/axios', '@nuxtjs/toast', 'nuxt-fontawesome', 'nuxt-clipboard2'],
+	modules: ['@nuxtjs/axios', '@nuxtjs/toast', 'nuxt-fontawesome', 'nuxt-clipboard2', '@nuxtjs/redirect-module'],
 
 	axios: {
 		proxy: true,
@@ -48,4 +48,9 @@ export default {
 			},
 		],
 	},
+
+	redirect: [
+		{ from: '/discord', to: 'https://discord.gg/AuWCjAb' },
+		{ from: '/github', to: 'https://github.com/ohagiiman' },
+	],
 };
