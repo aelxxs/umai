@@ -27,7 +27,7 @@ export default {
 		proxy: true,
 	},
 	proxy: {
-		'/api/': 'http://localhost:3001/',
+		'/api/': 'https://umai.pw/',
 	},
 	toast: {
 		position: 'top-right',
