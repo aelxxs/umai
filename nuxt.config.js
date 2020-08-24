@@ -1,6 +1,6 @@
 export default {
-	mode: 'universal',
-	target: 'server',
+	mode: 'spa',
+	target: 'static',
 
 	head: {
 		title: 'umai.pw',

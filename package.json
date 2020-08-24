@@ -5,7 +5,8 @@
 	"scripts": {
 		"dev": "nuxt",
 		"build": "nuxt build",
-		"start": "nuxt start"
+		"start": "nuxt start",
+		"generate": "nuxt generate"
 	},
 	"dependencies": {
 		"@fortawesome/free-brands-svg-icons": "^5.14.0",
