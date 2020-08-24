@@ -1,0 +1,200 @@
+.header {
+	display: flex;
+	margin-top: 1.5rem;
+	line-height: 2rem;
+	color: white;
+	font-size: 18px;
+
+	.title {
+		user-select: none;
+		&:hover {
+			animation: tada 1s 1;
+		}
+	}
+}
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+
+	.nav {
+		color: white;
+		text-align: center;
+		margin-bottom: .5rem;
+
+		.item {
+			color: inherit;
+			opacity: .35;
+			text-decoration: none;
+			cursor: pointer;
+
+			&:hover {
+				opacity: .75;
+				text-decoration: underline;
+			}
+		}
+
+		.selected {
+			opacity: 1;
+			text-decoration: underline;
+		}
+	}
+
+	.input {
+		font: inherit;
+		padding: .5rem;
+		color: white;
+		border: 1px solid transparent;
+		border-radius: .25rem;
+
+		background: #232533;
+		&:active,
+		&:hover,
+		&:focus {
+			outline: none;
+			box-shadow: 0 0 0 0.125em #2c2e40;
+		}
+
+		&::placeholder {
+			color: white;
+			opacity: .55;
+		}
+	}
+
+	.shorten {
+		font: inherit;
+		cursor: pointer;
+		padding: .5rem;
+		border: none;
+		border-radius: .25rem;
+		color: white;
+		background: #00cc74;
+		border: 1px solid transparent;
+
+		&:active,
+		&:hover,
+		&:focus {
+			border: 1px solid black;
+			outline: none;
+		}
+
+		&:disabled {
+			cursor: not-allowed;
+			opacity: .5;
+		}
+	}
+
+	.info {
+		color: white;
+		opacity: .55;
+		text-align: center;
+		margin-top: .5rem;
+	}
+}
+
+.footer {
+	display: flex;
+	margin-bottom: 2rem;
+	color: #ffffff;
+
+	.link {
+		color: inherit;
+		margin: 0 1.25rem;
+		display: flex;
+		text-decoration: none;
+
+		.text {
+			color: inherit;
+			margin-left: .25rem;
+			display: none;
+		}
+
+		&:hover {
+			.text {
+				display: block;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.icon {
+		color: #ffffff;
+
+		&:not(:first-child) {
+			padding-left: 1rem;
+		}
+	}
+}
+
+.toast {
+	padding: .5rem !important;
+	border-radius: .5rem !important;
+}
+
+@keyframes tada {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+
+	10%,
+	20% {
+		transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+	}
+
+	30%,
+	50%,
+	70%,
+	90% {
+		transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+	}
+
+	40%,
+	60%,
+	80% {
+		transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+	}
+
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@keyframes wave {
+	0% {
+		transform: rotate(0.0deg);
+	}
+	10% {
+		transform: rotate(14.0deg);
+	}
+	20% {
+		transform: rotate(-8.0deg);
+	}
+	30% {
+		transform: rotate(14.0deg);
+	}
+	40% {
+		transform: rotate(-4.0deg);
+	}
+	50% {
+		transform: rotate(10.0deg);
+	}
+	60% {
+		transform: rotate(0.0deg);
+	}
+	100% {
+		transform: rotate(0.0deg);
+	}
+}
+
+.wave {
+	animation: wave 2.5s infinite;
+}
