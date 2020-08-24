@@ -27,7 +27,7 @@ export default {
 		proxy: true,
 	},
 	proxy: {
-		'/api/': 'https://umai.pw/',
+		'/api/': { target: 'https://api.umai.pw/', pathRewrite: { '^/api/': '' } },
 	},
 	toast: {
 		position: 'top-right',
