@@ -1,0 +1,6 @@
+[[redirects]]
+  from = "/:id"
+  to = "https://umai.pw/api/:id"
+  status = 301
+  force = true
+  headers = {X-From = "Netlify"}
