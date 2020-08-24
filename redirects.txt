@@ -1,1 +1,0 @@
-/:id  https://umai.pw/api/:id 301!

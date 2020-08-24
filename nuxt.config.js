@@ -1,9 +1,9 @@
 export default {
-	mode: 'spa',
-	target: 'static',
+	mode: 'universal',
+	target: 'server',
 
 	head: {
-		title: 'umai.pw',
+		title: 'うまい ！',
 		meta: [
 			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -11,6 +11,8 @@ export default {
 		],
 		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
 	},
+
+	components: true,
 
 	pwa: {
 		manifest: {
@@ -21,13 +23,24 @@ export default {
 
 	css: ['~/assets/scss/root.scss'],
 
+	pageTransition: {
+		name: 'zoom-fade',
+		mode: 'out-in',
+	},
+
+	templateTransition: {
+		name: 'zoom-fade',
+		mode: 'out-in',
+	},
+
 	modules: ['@nuxtjs/axios', '@nuxtjs/toast', 'nuxt-fontawesome', 'nuxt-clipboard2', '@nuxtjs/redirect-module'],
 
 	axios: {
 		proxy: true,
 	},
+
 	proxy: {
-		'/api/': { target: 'https://api.umai.pw/', pathRewrite: { '^/api/': '' } },
+		'/api/': { target: 'http://localhost:3001/', pathRewrite: { '^/api/': '' } },
 	},
 	toast: {
 		position: 'top-right',

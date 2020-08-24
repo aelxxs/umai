@@ -1,9 +1,9 @@
 .header {
 	display: flex;
-	margin-top: 1.5rem;
+	margin-top: 2rem;
 	line-height: 2rem;
 	color: white;
-	font-size: 18px;
+	font-size: 19px;
 
 	.title {
 		user-select: none;
@@ -94,6 +94,7 @@
 	}
 
 	.info {
+		user-select: none;
 		color: white;
 		opacity: .55;
 		text-align: center;
@@ -197,4 +198,12 @@
 
 .wave {
 	animation: wave 2.5s infinite;
+}
+
+.hidden-mobile {
+	@media screen and (max-width: 768px) {
+		& {
+			display: none;
+		}
+	}
 }
