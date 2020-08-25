@@ -42,7 +42,7 @@
         this.done = false;
 
         try {
-          const data = await this.$axios.$post("/v1/url", {
+          const data = await this.$axios.$post("/url", {
             url: this.url,
           });
 
