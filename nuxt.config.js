@@ -40,7 +40,7 @@ export default {
 	},
 
 	proxy: {
-		'/v1': { target: 'https://api.umai.pw/' },
+		'/v1': { target: 'https://api.umai.pw/', pathRewrite: { '^/api': '' } },
 	},
 	toast: {
 		position: 'top-right',
