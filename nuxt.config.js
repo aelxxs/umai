@@ -1,5 +1,5 @@
 export default {
-	mode: 'universal',
+	mode: 'spa',
 	target: 'server',
 
 	head: {
@@ -64,12 +64,4 @@ export default {
 		{ from: '^/discord', to: 'https://discord.gg/AuWCjAb', statusCode: 301 },
 		{ from: '^/github', to: 'https://github.com/ohagiiman', statusCode: 301 },
 	],
-	build: {
-		extractCSS: true,
-		postcss: {
-			preset: {
-				autoprefixer,
-			},
-		},
-	},
 };
