@@ -68,14 +68,10 @@ export default {
 	],
 
 	build: {
-		friendlyErrors: true,
 		extractCSS: true,
 		postcss: {
 			preset: {
 				autoprefixer,
-				features: {
-					customProperties: false,
-				},
 			},
 		},
 	},
