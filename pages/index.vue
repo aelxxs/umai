@@ -1,15 +1,11 @@
 <template>
   <div class="container">
-    <nav style="user-select: none;" class="nav">
-      <span class="item" :class="current === 0 ? 'selected' : ''" @click="current = 0">
-        <fa-icon icon="link" />
-      </span>
+    <nav class="nav">
+      <span class="item" :class="current === 0 ? 'selected' : ''" @click="current = 0">urls</span>
       <span>
         <small>/</small>
       </span>
-      <span class="item" :class="current === 1 ? 'selected' : ''" @click="current = 1">
-        <fa-icon icon="image" />
-      </span>
+      <span class="item" :class="current === 1 ? 'selected' : ''" @click="current = 1">files</span>
     </nav>
     <LinkForm v-show="current === 0" />
     <FileForm v-show="current === 1" />

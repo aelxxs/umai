@@ -1,17 +1,17 @@
 <template>
   <footer class="footer" style="user-select: none;">
-    <nuxt-link class="link" to="/discord">
+    <a href="/discord" class="link">
       <fa-icon class="fa-lg" :icon="['fab','discord']" :style="{ color: '#7289DA' }" />
       <span class="text">discord</span>
-    </nuxt-link>:
-    <nuxt-link class="link" to="/github">
+    </a>:
+    <a href="/github" class="link">
       <fa-icon class="fa-lg" :icon="['fab','github-alt']" :style="{ color: 'white' }" />
       <span class="text">github</span>
-    </nuxt-link>:
-    <nuxt-link class="link" to="/email">
-      <fa-icon class="fa-lg" icon="envelope" :style="{ color: '#ff304f' }" />
-      <span class="text">email</span>
-    </nuxt-link>
+    </a>:
+    <a href="/sharex" class="link">
+      <fa-icon class="fa-lg" icon="share" :style="{ color: '#ff304f' }" />
+      <span class="text">sharex</span>
+    </a>
   </footer>
 </template>
 

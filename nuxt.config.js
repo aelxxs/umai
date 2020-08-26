@@ -33,12 +33,11 @@ export default {
 		mode: 'out-in',
 	},
 
-	modules: ['@nuxtjs/axios', '@nuxtjs/toast', 'nuxt-fontawesome', 'nuxt-clipboard2', '@nuxtjs/redirect-module'],
+	modules: ['@nuxtjs/redirect-module', '@nuxtjs/axios', '@nuxtjs/toast', 'nuxt-fontawesome', 'nuxt-clipboard2'],
 
 	axios: {
 		proxy: true,
 	},
-
 	proxy: {
 		'/v1': { target: 'https://api.umai.pw/', pathRewrite: { '^/api': '' } },
 	},
@@ -61,9 +60,16 @@ export default {
 			},
 		],
 	},
-
 	redirect: [
-		{ from: '/discord', to: 'https://discord.gg/AuWCjAb' },
-		{ from: '/github', to: 'https://github.com/ohagiiman' },
+		{ from: '^/discord', to: 'https://discord.gg/AuWCjAb', statusCode: 301 },
+		{ from: '^/github', to: 'https://github.com/ohagiiman', statusCode: 301 },
 	],
+	build: {
+		extractCSS: true,
+		postcss: {
+			preset: {
+				autoprefixer,
+			},
+		},
+	},
 };

@@ -20,6 +20,7 @@
 	flex-direction: column;
 	justify-content: space-between;
 	height: 100vh;
+	color: #ffffff;
 }
 
 .container {
@@ -27,15 +28,20 @@
 	flex-direction: column;
 
 	.nav {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		color: white;
-		text-align: center;
 		margin-bottom: .5rem;
+		user-select: none;
 
 		.item {
 			color: inherit;
 			opacity: .35;
 			text-decoration: none;
 			cursor: pointer;
+			text-align: center;
+			margin: 0 .5rem;
 
 			&:hover {
 				opacity: .75;
