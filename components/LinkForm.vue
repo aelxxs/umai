@@ -44,7 +44,7 @@
         this.done = false;
 
         try {
-          const data = await this.$axios.$post("/v1/url", {
+          const data = await Axios.$post("/v1/url", {
             url: this.url,
           });
 
