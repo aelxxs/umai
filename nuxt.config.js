@@ -1,3 +1,5 @@
+import autoprefixer from 'autoprefixer';
+
 export default {
 	mode: 'universal',
 	target: 'server',
@@ -64,4 +66,17 @@ export default {
 		{ from: '^/discord', to: 'https://discord.gg/AuWCjAb', statusCode: 301 },
 		{ from: '^/github', to: 'https://github.com/ohagiiman', statusCode: 301 },
 	],
+
+	build: {
+		friendlyErrors: true,
+		extractCSS: true,
+		postcss: {
+			preset: {
+				autoprefixer,
+				features: {
+					customProperties: false,
+				},
+			},
+		},
+	},
 };
