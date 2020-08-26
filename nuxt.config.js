@@ -1,5 +1,6 @@
 export default {
 	mode: 'spa',
+	target: 'static',
 
 	head: {
 		title: 'うまい ！',
