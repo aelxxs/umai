@@ -23,8 +23,6 @@
 </template>
 
 <script >
-  import Axios from "@nuxtjs/axios";
-
   export default {
     name: "LinkForm",
 
@@ -44,7 +42,7 @@
         this.done = false;
 
         try {
-          const data = await Axios.$post("https://api.umai.pw/v1/url", {
+          const data = await this.$axios.$post("/v1/url", {
             url: this.url,
           });
 
