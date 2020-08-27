@@ -74,6 +74,12 @@
 			color: white;
 			opacity: .55;
 		}
+		&:disabled {
+			&:hover {
+				cursor: not-allowed;
+				opacity: .5;
+			}
+		}
 	}
 
 	.shorten {

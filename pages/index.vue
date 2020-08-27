@@ -1,14 +1,14 @@
 <template>
   <div class="container">
-    <nav class="nav">
+    <!-- <nav class="nav">
       <span class="item" :class="current === 0 ? 'selected' : ''" @click="current = 0">urls</span>
       <span>
         <small>/</small>
       </span>
       <span class="item" :class="current === 1 ? 'selected' : ''" @click="current = 1">files</span>
-    </nav>
+    </nav>-->
     <LinkForm v-show="current === 0" />
-    <FileForm v-show="current === 1" />
+    <!-- <FileForm v-show="current === 1" /> -->
     <PageTip />
   </div>
 </template>

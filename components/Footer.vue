@@ -8,9 +8,9 @@
       <fa-icon class="fa-lg" :icon="['fab','github-alt']" :style="{ color: 'white' }" />
       <span class="text">Github</span>
     </a>:
-    <a href="/sharex" class="link">
+    <a href="/" class="link">
       <fa-icon class="fa-lg" icon="share" :style="{ color: '#ff304f' }" />
-      <span class="text">ShareX</span>
+      <span class="text">Soon</span>
     </a>
   </footer>
 </template>
