@@ -67,12 +67,12 @@ export default {
 		{ from: '^/github', to: 'https://github.com/ohagiiman', statusCode: 301 },
 	],
 
-	serverMiddleware: [
-		{
-			path: '/',
-			handler: '~/middleware/redirect.js',
-		},
-	],
+	// serverMiddleware: [
+	// 	{
+	// 		path: '/',
+	// 		handler: '~/middleware/redirect.js',
+	// 	},
+	// ],
 
 	build: {
 		extractCSS: true,
