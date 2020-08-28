@@ -37,12 +37,6 @@ export default {
 
 	modules: ['@nuxtjs/redirect-module', '@nuxtjs/axios', '@nuxtjs/toast', 'nuxt-fontawesome', 'nuxt-clipboard2'],
 
-	axios: {
-		proxy: true,
-	},
-	proxy: {
-		'/v1': { target: 'https://api.umai.pw/', pathRewrite: { '^/api': '' } },
-	},
 	toast: {
 		position: 'top-right',
 		duration: 2500,

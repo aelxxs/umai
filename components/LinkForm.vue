@@ -42,7 +42,8 @@
         this.done = false;
 
         try {
-          const data = await this.$axios.$post("/v1/url", {
+          console.log("RUNNING");
+          const data = await this.$axios.$post("https://api.umai.pw/v1/url", {
             url: this.url,
           });
 
