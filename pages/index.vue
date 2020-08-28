@@ -7,7 +7,7 @@
       </span>
       <span class="item" :class="current === 1 ? 'selected' : ''" @click="current = 1">files</span>
     </nav>-->
-    <LinkForm v-show="current === 0" />
+    <LinkForm />
     <!-- <FileForm v-show="current === 1" /> -->
     <PageTip />
   </div>

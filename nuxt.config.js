@@ -5,11 +5,56 @@ export default {
 	target: 'server',
 
 	head: {
-		title: 'うまい ！',
+		title: 'umai.pw | a light weight link shortener/resolver',
 		meta: [
 			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
-			{ hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+			{
+				hid: 'description',
+				name: 'description',
+				content: 'a light weight link shortener/resolver build with node.js and cloudflare workers',
+			},
+			{ hid: 'rating', name: 'rating', content: 'General' },
+
+			//
+			{ charset: 'utf-8' },
+			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
+			{ hid: 'theme-color', name: 'theme-color', content: `#00cc74` },
+			{ hid: 'description', name: 'description', content: `a light weight link shortener/resolver 🥡` },
+			{ hid: 'keywords', name: 'keywords', content: `light wight, link shortener, fast, simple` },
+			{
+				hid: 'apple-mobile-web-app-title',
+				name: 'apple-mobile-web-app-title',
+				content: `umai.pw`,
+			},
+			{ hid: 'application-name', name: 'application-name', content: `umai.pw` },
+			{ hid: 'msapplication-TileColor', name: 'msapplication-TileColor', content: `#2b5797` },
+			// {
+			// 	hid: 'msapplication-config',
+			// 	name: 'msapplication-config',
+			// 	content: `${process.env.domain}/assets/browserconfig.xml`,
+			// },
+			{ hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
+			{ hid: 'twitter:site', name: 'twitter:site', content: `@ohagiiman` },
+			{ hid: 'twitter:creator', name: 'twitter:creator', content: `@ohagiiman` },
+			{ hid: 'twitter:title', name: 'twitter:title', content: `umai.pw` },
+			{
+				hid: 'twitter:description',
+				name: 'twitter:description',
+				content: `a light weight link shortener/resolver 🥡`,
+			},
+			// { hid: 'twitter:image', name: 'twitter:image', content: `${process.env.domain}/assets/share.jpg` },
+			{ hid: 'og:url', property: 'og:url', content: `https://umai.pw` },
+			{ hid: 'og:type', property: 'og:type', content: 'website' },
+			{ hid: 'og:title', property: 'og:title', content: `umai.pw` },
+			{ hid: 'og:description', property: 'og:description', content: `a light weight link shortener/resolver 🥡` },
+			// { hid: 'og:image', property: 'og:image', content: `${process.env.domain}/assets/share.jpg` },
+			// {
+			// 	hid: 'og:image:secure_url',
+			// 	property: 'og:image:secure_url',
+			// 	content: `${process.env.domain}/assets/share.jpg`,
+			// },
+			{ hid: 'og:site_name', property: 'og:site_name', content: `umai.pw` },
 		],
 		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
 	},
