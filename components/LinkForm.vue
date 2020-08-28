@@ -1,6 +1,7 @@
 <template>
   <form style="padding: 1rem;" @submit.prevent="shorten">
     <input
+      @input="copied = true"
       class="input"
       required
       v-model="url"
@@ -30,7 +31,6 @@
       return {
         url: "",
         done: true,
-        error: null,
         copied: true,
       };
     },
@@ -39,26 +39,29 @@
       async shorten() {
         if (!this.done) return;
 
-        this.done = false;
-
         try {
-          console.log("RUNNING");
-          const data = await this.$axios.$post("https://api.umai.pw/v1/url", {
-            url: this.url,
-          });
+          this.done = false;
 
-          this.url = data.origin;
+          const { origin } = await this.$axios.$post(
+            "https://api.umai.pw/v1/url",
+            {
+              url: this.url,
+            }
+          );
+
+          this.url = origin;
           this.copied = false;
 
           this.$toast.success("🍣 link shortened", { timeout: 2000 });
-
-          this.done = true;
         } catch (error) {
-          this.done = true;
           this.url = "";
+          this.copied = true;
+
           this.$toast.error(error.response.data.message, {
             timeout: 2000,
           });
+        } finally {
+          this.done = true;
         }
       },
 
