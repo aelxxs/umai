@@ -12,32 +12,14 @@
 	font-style: normal;
 }
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	text-rendering: optimizeLegibility;
-	font-family: 'JetBrains Mono';
-}
-
-*,
-::before,
-::after {
-	box-sizing: border-box;
-}
-
-::-webkit-scrollbar {
-	width: 0;
-	height: 0;
-}
-
 html,
 body {
 	margin: 0;
-	height: 100vh;
-}
-
-body {
+	padding: 0;
+	height: 100%;
+	min-height: 100%;
+	box-sizing: border-box;
+	text-rendering: optimizeLegibility;
 	font-family: 'JetBrains Mono';
 	background: $background;
 }

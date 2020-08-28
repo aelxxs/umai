@@ -1,3 +1,12 @@
+.wrapper {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+	color: #ffffff;
+}
+
 .header {
 	display: flex;
 	margin-top: 2rem;
@@ -8,19 +17,9 @@
 	.title {
 		user-select: none;
 		&:hover {
-			animation: tada 1s 1;
+			animation: tada 5s 1;
 		}
 	}
-}
-
-.wrapper {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	justify-content: space-between;
-	height: 100%;
-	color: #ffffff;
 }
 
 .container {
