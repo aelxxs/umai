@@ -31,11 +31,7 @@
     data() {
       return {
         url: "",
-        files: [
-          {
-            origin: "https://i.umai.pw/XPbFcc.jpg",
-          },
-        ],
+        files: [],
       };
     },
 
