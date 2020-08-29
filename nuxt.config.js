@@ -74,7 +74,24 @@ export default {
 		duration: 2500,
 		keepOnHover: true,
 		className: 'toast',
+		register: [
+			{
+				name: 'error',
+				message: (msg) => msg,
+				options: {
+					className: 'toast-error',
+				},
+			},
+			{
+				name: 'success',
+				message: (msg) => msg,
+				options: {
+					className: 'toast-success',
+				},
+			},
+		],
 	},
+
 	fontawesome: {
 		component: 'fa-icon',
 		imports: [
@@ -88,18 +105,11 @@ export default {
 			},
 		],
 	},
-	redirect: [
-		{ from: '^/discord', to: 'https://discord.gg/AuWCjAb', statusCode: 301 },
-		{ from: '^/github', to: 'https://github.com/ohagiiman', statusCode: 301 },
-	],
 
-	// serverMiddleware: [
-	// 	{
-	// 		path: '/',
-	// 		handler: '~/middleware/redirect.js',
-	// 	},
-	// ],
-
+	loading: {
+		color: '#00cc74',
+		failedColor: '#ff304f',
+	},
 	build: {
 		extractCSS: true,
 		postcss: {

@@ -151,34 +151,35 @@
 	border-radius: .5rem !important;
 }
 
+.toast-error {
+	background: #ff304f !important;
+}
+.toast-success {
+	background: #00cc74 !important;
+}
 @keyframes tada {
 	0% {
 		transform: scale3d(1, 1, 1);
 	}
-
 	10%,
 	20% {
 		transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
 	}
-
 	30%,
 	50%,
 	70%,
 	90% {
 		transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
 	}
-
 	40%,
 	60%,
 	80% {
 		transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
 	}
-
 	100% {
 		transform: scale3d(1, 1, 1);
 	}
 }
-
 @keyframes wave {
 	0% {
 		transform: rotate(0.0deg);
@@ -205,15 +206,24 @@
 		transform: rotate(0.0deg);
 	}
 }
-
 .wave {
 	animation: wave 2.5s infinite;
 }
-
 .hidden-mobile {
 	@media screen and (max-width: 768px) {
 		& {
 			display: none;
 		}
+	}
+}
+.bar {
+	display: flex;
+	justify-content: space-between;
+	padding: .25rem;
+}
+.link {
+	cursor: pointer;
+	&:hover {
+		text-decoration: underline;
 	}
 }

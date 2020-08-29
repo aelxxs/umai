@@ -52,12 +52,12 @@
           this.url = origin;
           this.copied = false;
 
-          this.$toast.success("🍣 link shortened", { timeout: 2000 });
+          this.$toast.global.success("🍣 link shortened", { timeout: 2000 });
         } catch (error) {
           this.url = "";
           this.copied = true;
 
-          this.$toast.error(error.response.data.message, {
+          this.$toast.global.error(error.response.data.message, {
             timeout: 2000,
           });
         } finally {
@@ -70,7 +70,7 @@
         this.url = "";
         this.copied = true;
 
-        this.$toast.success("🍣 link copied", { timeout: 2000 });
+        this.$toast.global.success("🍣 link copied", { timeout: 2000 });
       },
     },
   };
