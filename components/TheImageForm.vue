@@ -31,12 +31,7 @@
 
     data() {
       return {
-        images: [
-          {
-            name: "yp2LCg.png",
-            origin: "https://i.waifu.pics/P817hp4.jpg",
-          },
-        ],
+        images: [],
       };
     },
 
