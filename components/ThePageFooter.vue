@@ -11,14 +11,14 @@
       <span class="icon">
         <fa-icon class="fa-lg" :icon="['fab','github-alt']" :style="{ color: 'white' }" />
       </span>
-      <span class="link-text">Github</span>
+      <span class="link-text">GitHub</span>
     </a>
     <span>&#58;</span>
     <a href="/" class="footer-link">
       <span class="icon">
-        <fa-icon class="fa-lg" icon="star" :style="{ color: '#ff304f' }" />
+        <fa-icon class="fa-lg" :icon="['fab', 'twitter']" :style="{ color: '#1DA1F2' }" />
       </span>
-      <span class="link-text">Dunno</span>
+      <span class="link-text">Twitter</span>
     </a>
   </footer>
 </template>

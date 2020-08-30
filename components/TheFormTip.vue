@@ -9,7 +9,7 @@
   const tips = ["最近どうですか？"];
 
   export default {
-    name: "ThePageTip",
+    name: "TheFormTip",
 
     data() {
       return {
@@ -25,6 +25,6 @@
     color: white;
     opacity: 0.55;
     text-align: center;
-    margin-top: 0.5rem;
+    margin-top: 1.5rem;
   }
 </style>

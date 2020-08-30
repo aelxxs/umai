@@ -8,18 +8,13 @@
       <span class="item" :class="current === 1 ? 'selected' : ''" @click="current = 1">images</span>
     </nav>
     <TheLinkForm v-show="current === 0" />
-    <FileForm v-show="current === 1" />
-    <ThePageTip />
+    <TheImageForm v-show="current === 1" />
+    <TheFormTip />
   </main>
 </template>
 
 <script>
   export default {
-    transition: {
-      name: "zoom-fade",
-      mode: "out-in",
-    },
-
     data() {
       return {
         current: 0,

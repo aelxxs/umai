@@ -57,7 +57,7 @@ export default {
 
 	css: ['~/assets/scss/root.scss'],
 
-	modules: ['@nuxtjs/redirect-module', '@nuxtjs/axios', '@nuxtjs/toast', 'nuxt-fontawesome', 'nuxt-clipboard2'],
+	modules: ['@nuxtjs/axios', '@nuxtjs/toast', 'nuxt-fontawesome', 'nuxt-clipboard2'],
 
 	axios: {
 		baseURL: 'https://api.umai.pw',

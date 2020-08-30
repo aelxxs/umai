@@ -1,5 +1,5 @@
 .form {
-	padding: 1rem;
+	animation: zoomIn .1s 1;
 }
 
 .hidden-mobile {
@@ -11,11 +11,7 @@
 }
 
 .icon {
-	// align-items: center;
-	// display: inline-flex;
-	// justify-content: center;
-	height: 1.5rem;
-	width: 1.5rem;
+	display: inline-block;
 }
 
 .toast {
