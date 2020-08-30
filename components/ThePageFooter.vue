@@ -37,7 +37,6 @@
     align-items: center;
     margin-bottom: 1.2rem;
     user-select: none;
-    animation: bounceInUp 1s 1;
 
     .footer-link {
       color: inherit;
