@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <main class="container">
     <nav class="nav">
       <span class="item" :class="current === 0 ? 'selected' : ''" @click="current = 0">urls</span>
       <span>
@@ -7,10 +7,10 @@
       </span>
       <span class="item" :class="current === 1 ? 'selected' : ''" @click="current = 1">images</span>
     </nav>
-    <LinkForm v-show="current === 0" />
+    <TheLinkForm v-show="current === 0" />
     <FileForm v-show="current === 1" />
-    <PageTip />
-  </div>
+    <ThePageTip />
+  </main>
 </template>
 
 <script>

@@ -1,0 +1,31 @@
+.form {
+	padding: 1rem;
+}
+
+.hidden-mobile {
+	@media screen and (max-width: 768px) {
+		& {
+			display: none;
+		}
+	}
+}
+
+.icon {
+	// align-items: center;
+	// display: inline-flex;
+	// justify-content: center;
+	height: 1.5rem;
+	width: 1.5rem;
+}
+
+.toast {
+	padding: .5rem !important;
+	border-radius: .5rem !important;
+}
+
+.toast-error {
+	background: #ff304f !important;
+}
+.toast-success {
+	background: #00cc74 !important;
+}

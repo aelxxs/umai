@@ -57,18 +57,11 @@ export default {
 
 	css: ['~/assets/scss/root.scss'],
 
-	pageTransition: {
-		name: 'zoom-fade',
-		mode: 'out-in',
-	},
-
-	templateTransition: {
-		name: 'zoom-fade',
-		mode: 'out-in',
-	},
-
 	modules: ['@nuxtjs/redirect-module', '@nuxtjs/axios', '@nuxtjs/toast', 'nuxt-fontawesome', 'nuxt-clipboard2'],
 
+	axios: {
+		baseURL: 'https://api.umai.pw',
+	},
 	toast: {
 		position: 'top-right',
 		duration: 2500,

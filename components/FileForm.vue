@@ -1,76 +1,131 @@
 <template>
-  <div class>
-    <form style="padding: 1rem;" enctype="multipart/form-data">
-      <input
-        ref="file"
-        id="file"
-        @change="change($event.target.name, $event.target.files)"
-        class="file"
-        type="file"
-        name="files[]"
-      />
-      <label for="file" class="file-upload file-picker">
+  <section class="form">
+    <form enctype="multipart/form-data">
+      <label class="img-upload-box">
+        <input @change="queue" class="img-input" type="file" name="files[]" />
         <span class="icon">
           <fa-icon icon="upload" />
         </span>
         <span>choose an image...</span>
       </label>
     </form>
-    <div class="file-links" v-for="file in files" :key="file.origin">
-      <a target="_blank" class="file-link" :href="file.origin">
-        {{file.origin.split('https://')[1]}}
-        <img :src="file.origin" class="img-preview" />
-      </a>
+    <div class="img-links" v-for="image in images" :key="image.origin">
+      <div class="left">
+        <a target="_blank" :href="image.origin" class="img-link">{{image.name}}</a>
+      </div>
+      <div class="right">
+        <button @click="copy(image.origin)" class="copy-button">
+          <span class="icon">
+            <fa-icon class="wave" icon="copy" />
+          </span>
+        </button>
+      </div>
+      <!-- <img :src="file.origin" class="img-preview" /> -->
     </div>
-  </div>
+  </section>
 </template>
 
 <script >
   export default {
     name: "FileForm",
+
     data() {
       return {
-        url: "",
-        files: [],
+        images: [],
       };
     },
 
     methods: {
-      async change(fieldName, fileList) {
+      async queue(event) {
+        const name = event.target.name;
+        const images = event.target.files;
+
         const formData = new FormData();
 
-        if (!fileList.length) return;
+        if (!images.length) return;
 
-        Array.from(Array(fileList.length).keys()).map((x) => {
-          formData.append(fieldName, fileList[x], fileList[x].name);
+        Array.from(Array(images.length).keys()).map((x) => {
+          formData.append(name, images[x], images[x].name);
         });
 
-        await this.save(formData);
+        return await this.upload(formData);
       },
-
-      async save(img) {
+      async upload(images) {
         try {
-          const data = await this.$axios.$post(
-            "https://api.umai.pw/v1/file",
-            img
-          );
+          const data = await this.$axios.$post("/v1/file", images);
 
-          this.files = data;
-          this.$toast.global.success("🍣 file uploaded", { timeout: 2000 });
+          this.images = data;
+
+          return this.$toast.global.success("🍣 file uploaded");
         } catch (error) {
-          this.$toast.global.error(error.response.data.message, {
-            timeout: 2000,
-          });
+          this.$toast.global.error(error.response.data.message);
         }
       },
+      async copy(link) {
+        await this.$copyText(link);
+        this.images = [];
 
-      async copy(i) {
-        await this.$copyText(this.files[i].origin);
-        // this.uploaded = false;
-        // this.file = null;
-
-        this.$toast.global.success("🍣 link copied", { timeout: 2000 });
+        this.$toast.global.success("🍣 link copied");
       },
     },
   };
 </script>
+
+<style lang="scss" scoped>
+  .img-input {
+    display: none;
+    position: absolute;
+  }
+
+  .img-upload-box {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    padding: 1em 2em;
+    border-radius: 0.25rem;
+    background: #232533;
+
+    &:hover {
+      filter: brightness(115%);
+    }
+  }
+
+  .img-links {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+
+    .img-preview {
+      border-radius: 0.25rem;
+      display: none;
+      width: 200px;
+    }
+
+    .img-link {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+
+        .img-preview {
+          display: block;
+        }
+      }
+    }
+
+    .copy-button {
+      cursor: pointer;
+      font: inherit;
+      border-radius: 0.25rem;
+      border: none;
+      color: white;
+      background: #00cc74;
+    }
+  }
+</style>
