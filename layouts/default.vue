@@ -18,3 +18,15 @@
     },
   };
 </script>
+
+<style lang="scss" scoped>
+  .wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    color: #ffffff;
+    overflow: hidden;
+  }
+</style>

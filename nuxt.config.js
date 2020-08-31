@@ -15,8 +15,6 @@ export default {
 				content: 'a light weight link shortener/resolver build with node.js and cloudflare workers',
 			},
 			{ hid: 'rating', name: 'rating', content: 'General' },
-
-			//
 			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
 			{ hid: 'theme-color', name: 'theme-color', content: `#00cc74` },
@@ -50,19 +48,12 @@ export default {
 
 	css: ['~/assets/scss/root.scss'],
 
-	modules: ['@nuxtjs/axios', '@nuxtjs/toast', '@nuxtjs/pwa', 'nuxt-fontawesome', 'nuxt-clipboard2'],
-
-	pwa: {
-		icon: false,
-		manifest: {
-			background_color: '#282b30',
-			display: 'minimal-ui',
-		},
-	},
+	modules: ['@nuxtjs/axios', '@nuxtjs/toast', 'nuxt-fontawesome', 'nuxt-clipboard2'],
 
 	axios: {
 		baseURL: 'https://api.umai.pw',
 	},
+
 	toast: {
 		position: 'top-right',
 		duration: 2500,
