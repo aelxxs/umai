@@ -52,9 +52,9 @@
       },
       async upload(images) {
         try {
-          const data = await this.$axios.$post("/v1/file", images);
+          const { files } = await this.$axios.$post("/v1/file", images);
 
-          this.images = data;
+          this.images = files;
 
           return this.$toast.global.success("🍣 file uploaded");
         } catch (error) {

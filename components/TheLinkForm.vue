@@ -13,7 +13,7 @@
       <button
         :disabled="url.length < 5"
         type="submit"
-        class="shorten-button"
+        class="submit-button"
         @click="copied ? shorten() : copy()"
       >
         <span class="icon">
@@ -93,7 +93,7 @@
     }
   }
 
-  .shorten-button {
+  .submit-button {
     font: inherit;
     cursor: pointer;
     padding: 0.5rem;
@@ -106,7 +106,7 @@
     &:active,
     &:hover,
     &:focus {
-      border: 1px solid black;
+      border: 1px solid #191b25;
       outline: none;
     }
     &:disabled {
