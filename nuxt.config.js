@@ -82,11 +82,11 @@ export default {
 		imports: [
 			{
 				set: '@fortawesome/free-solid-svg-icons',
-				icons: ['fas'],
+				icons: ['faUpload', 'faAngleRight', 'faCopy', 'faLink'],
 			},
 			{
 				set: '@fortawesome/free-brands-svg-icons',
-				icons: ['fab'],
+				icons: ['faDiscord', 'faTwitter', 'faGithubAlt'],
 			},
 		],
 	},
