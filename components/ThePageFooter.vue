@@ -36,7 +36,6 @@
     text-align: center;
     align-items: center;
     margin-bottom: 1.2rem;
-    user-select: none;
 
     .footer-link {
       color: inherit;

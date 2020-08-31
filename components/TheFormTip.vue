@@ -21,7 +21,6 @@
 
 <style lang="scss" scoped>
   .info-message {
-    user-select: none;
     color: white;
     opacity: 0.55;
     text-align: center;

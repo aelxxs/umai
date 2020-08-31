@@ -88,7 +88,6 @@
     padding: 1em 2em;
     border-radius: 0.25rem;
     background: #232533;
-    user-select: none;
 
     &:hover {
       filter: brightness(115%);

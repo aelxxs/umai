@@ -47,7 +47,6 @@
     animation: bounceInDown 1s 1;
 
     .title {
-      user-select: none;
       &:hover {
         animation: tada 1s 1;
       }

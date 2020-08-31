@@ -41,7 +41,6 @@
       justify-content: center;
       color: white;
       margin-bottom: 1.5rem;
-      user-select: none;
 
       .nav-item {
         color: inherit;
