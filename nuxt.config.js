@@ -48,16 +48,17 @@ export default {
 
 	components: true,
 
+	css: ['~/assets/scss/root.scss'],
+
+	modules: ['@nuxtjs/axios', '@nuxtjs/toast', '@nuxtjs/pwa', 'nuxt-fontawesome', 'nuxt-clipboard2'],
+
 	pwa: {
+		icon: false,
 		manifest: {
 			background_color: '#282b30',
 			display: 'minimal-ui',
 		},
 	},
-
-	css: ['~/assets/scss/root.scss'],
-
-	modules: ['@nuxtjs/axios', '@nuxtjs/toast', 'nuxt-fontawesome', 'nuxt-clipboard2'],
 
 	axios: {
 		baseURL: 'https://api.umai.pw',
