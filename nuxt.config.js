@@ -12,13 +12,18 @@ export default {
 			{
 				hid: 'description',
 				name: 'description',
-				content: 'a light weight link shortener/resolver build with node.js and cloudflare workers',
+				content:
+					'a light weight link shortener/resolver & file host built with node.js, cloudflare workers, & nuxt.js',
 			},
 			{ hid: 'rating', name: 'rating', content: 'General' },
 			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
 			{ hid: 'theme-color', name: 'theme-color', content: `#00cc74` },
-			{ hid: 'description', name: 'description', content: `a light weight link shortener/resolver 🥡` },
+			{
+				hid: 'description',
+				name: 'description',
+				content: `a light weight link shortener/resolver & file host 🥡`,
+			},
 			{ hid: 'keywords', name: 'keywords', content: `light wight, link shortener, fast, simple` },
 			{
 				hid: 'apple-mobile-web-app-title',
@@ -33,12 +38,16 @@ export default {
 			{
 				hid: 'twitter:description',
 				name: 'twitter:description',
-				content: `a light weight link shortener/resolver 🥡`,
+				content: `a light weight link shortener/resolver & file host 🥡`,
 			},
 			{ hid: 'og:url', property: 'og:url', content: `https://umai.pw` },
 			{ hid: 'og:type', property: 'og:type', content: 'website' },
 			{ hid: 'og:title', property: 'og:title', content: `umai.pw` },
-			{ hid: 'og:description', property: 'og:description', content: `a light weight link shortener/resolver 🥡` },
+			{
+				hid: 'og:description',
+				property: 'og:description',
+				content: `a light weight link shortener/resolver & file host 🥡`,
+			},
 			{ hid: 'og:site_name', property: 'og:site_name', content: `umai.pw` },
 		],
 		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -95,6 +104,7 @@ export default {
 		color: '#00cc74',
 		failedColor: '#ff304f',
 	},
+
 	build: {
 		extractCSS: true,
 		postcss: {
