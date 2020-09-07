@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  const tips = ["最近どうですか？"];
+  const tips = ["最近どうですか？", "バナナ? 🍌 はい。", "退屈だ。"];
 
   export default {
     name: "TheFormTip",
