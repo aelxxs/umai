@@ -7,7 +7,7 @@
         required
         v-model="url"
         placeholder="🍣 paste a long url"
-        maxlength="50000"
+        maxlength="1000"
         minlength="5"
       />
       <button
