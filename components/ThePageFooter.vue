@@ -1,20 +1,20 @@
 <template>
   <footer class="footer">
-    <a href="https://discord.gg/AuWCjAb" class="footer-link">
+    <a taget="_blank" href="https://discord.gg/AuWCjAb" class="footer-link">
       <span class="icon">
         <fa-icon class="fa-lg" :icon="['fab','discord']" :style="{ color: '#7289DA' }" />
       </span>
       <span class="link-text">Discord</span>
     </a>
     <span>&#58;</span>
-    <a href="https://github.com/ohagiiman" class="footer-link">
+    <a taget="_blank" href="https://github.com/ohagiiman" class="footer-link">
       <span class="icon">
         <fa-icon class="fa-lg" :icon="['fab','github-alt']" :style="{ color: 'white' }" />
       </span>
       <span class="link-text">GitHub</span>
     </a>
     <span>&#58;</span>
-    <a href="/" class="footer-link">
+    <a taget="_blank" href="/" class="footer-link">
       <span class="icon">
         <fa-icon class="fa-lg" :icon="['fab', 'twitter']" :style="{ color: '#1DA1F2' }" />
       </span>
