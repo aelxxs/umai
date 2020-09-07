@@ -58,7 +58,11 @@
 
           return this.$toast.global.success("🍣 file uploaded");
         } catch (error) {
-          this.$toast.global.error(error.response.data.message);
+          return this.$toast.global.error(
+            error.response
+              ? error.response.data.message
+              : "An error occured - Try again?"
+          );
         }
       },
       async copy(link) {

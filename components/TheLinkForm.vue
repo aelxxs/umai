@@ -55,7 +55,11 @@
           this.copied = true;
           this.url = "";
 
-          return this.$toast.global.error(error.response.data.message);
+          return this.$toast.global.error(
+            error.response
+              ? error.response.data.message
+              : "An error occured - Try again?"
+          );
         } finally {
           this.done = true;
         }
