@@ -39,7 +39,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
+      color: #ffffff;
       margin-bottom: 1.5rem;
 
       .nav-item {
