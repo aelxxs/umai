@@ -70,7 +70,7 @@
         this.copied = true;
         this.url = "";
 
-        return this.$toast.global.success("🍣 link copied", { timeout: 2000 });
+        return this.$toast.global.success("🍣 link copied");
       },
     },
   };
