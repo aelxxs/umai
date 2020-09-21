@@ -84,7 +84,11 @@
     border: 1px solid transparent;
     border-radius: 0.25rem;
     background: #232533;
+    user-select: text;
 
+    &:invalid {
+      box-shadow: none;
+    }
     &:active,
     &:hover,
     &:focus {
@@ -94,6 +98,9 @@
     &::placeholder {
       color: white;
       opacity: 0.55;
+    }
+    &::selection {
+      background: #00cc74;
     }
   }
 
