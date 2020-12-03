@@ -1,0 +1,32 @@
+{
+	"name": "umai-api",
+	"version": "1.0.0",
+	"description": "🥡 umai.pw/api | a light weight link shortener/resolver & file uploader written in node.js/express -",
+	"main": "index.js",
+	"private": true,
+	"scripts": {
+		"start": "node -r dotenv/config .",
+		"dev": "nodemon --exec node -r dotenv/config ."
+	},
+	"keywords": [
+		"node.js"
+	],
+	"author": "Alexis#3207 (ohagiiman)",
+	"license": "MIT",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"cron": "^1.8.2",
+		"express": "^4.17.1",
+		"helmet": "^4.1.0",
+		"morgan": "^1.10.0",
+		"multer": "^1.4.2",
+		"nanoid": "^3.1.12",
+		"node-fetch": "^2.6.0",
+		"pg": "^8.3.2",
+		"sequelize": "^6.3.4"
+	},
+	"devDependencies": {
+		"dotenv": "^8.2.0",
+		"nodemon": "^2.0.4"
+	}
+}
